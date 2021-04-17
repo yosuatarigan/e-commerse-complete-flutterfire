@@ -12,6 +12,14 @@ class Splashcontent extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Column(
       children: [
+         Text(
+              "SHOP AMAZING",
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         Text(
           text,
           textAlign: TextAlign.center,

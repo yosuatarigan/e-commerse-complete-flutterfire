@@ -13,7 +13,7 @@ class _BodyState extends State<Body> {
     {"text": "Selamat datang di Shop Amazing", "image": "assets/shop.png"},
     {
       "text": "Dapatkan barang impian anda di toko ini",
-      "image": "assets/shop.png"
+      "image": "assets/cart2.png"
     },
   ];
   @override
@@ -24,14 +24,6 @@ class _BodyState extends State<Body> {
         child: Column(
           children: <Widget>[
             Spacer(),
-            Text(
-              "SHOP AMAZING",
-              style: TextStyle(
-                fontSize: 18,
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
             Expanded(
               flex: 3,
               child: PageView.builder(
