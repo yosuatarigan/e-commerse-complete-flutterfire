@@ -1,4 +1,5 @@
 import 'package:e_commerse_complete_flutterfire/component/tabscreen.dart';
+import 'package:e_commerse_complete_flutterfire/screen/CartScreen/Cartscreen.dart';
 import 'package:e_commerse_complete_flutterfire/screen/Home/HomeScree.dart';
 import 'package:e_commerse_complete_flutterfire/screen/Signin/signinscreen.dart';
 import 'package:e_commerse_complete_flutterfire/screen/splashscreen/splashscreen.dart';
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SigninScreen.routeName: (ctx) => SigninScreen(),
         HomeScreen.routeName: (ctx) => HomeScreen(),
-        TabsScreen.routeName : (ctx)=> TabsScreen(),
-        
+        TabsScreen.routeName: (ctx) => TabsScreen(),
+        CartScreen.routeName: (ctx) => CartScreen(),
       },
     );
   }
