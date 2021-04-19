@@ -1,4 +1,5 @@
 import 'package:e_commerse_complete_flutterfire/screen/Home/HomeScree.dart';
+import 'package:e_commerse_complete_flutterfire/screen/Profile/ProfileScreen.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _TabsScreenState extends State<TabsScreen> {
         'title': 'Home',
       },
       {
-        'page': HomeScreen(),
+        'page': ProfileScreen(),
         'title': 'Profile',
       },
     ];

@@ -1,3 +1,4 @@
+import 'package:e_commerse_complete_flutterfire/screen/Detailproduct/detailproduct.dart';
 import 'package:flutter/material.dart';
 
 class Products extends StatelessWidget {
@@ -37,7 +38,17 @@ class Products extends StatelessWidget {
               (index) => Productcontent(
                 image: products[index]["image"],
                 text: products[index]["text"],
-                press: () {},
+                press: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Detailproduct(
+                                image: products[index]["image"],
+                                text: products[index]["text"],
+                                price: products[index]["price"].toString(),
+                                press: () {},
+                              )));
+                },
                 price: products[index]['price'].toString(),
               ),
             ),
@@ -61,25 +72,28 @@ class Productcontent extends StatelessWidget {
   final press;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 100,
-          height: 100,
-          child: Image.asset(
-            image,
-            fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Text(
-          text,
-          style: TextStyle(color: Colors.black),
-        ),
-        Text(
-          'RP : $price',
-          style: TextStyle(color: Colors.orange),
-        )
-      ],
+          Text(
+            text,
+            style: TextStyle(color: Colors.black),
+          ),
+          Text(
+            'RP : $price',
+            style: TextStyle(color: Colors.orange),
+          )
+        ],
+      ),
     );
   }
 }

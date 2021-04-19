@@ -1,3 +1,4 @@
+import 'package:e_commerse_complete_flutterfire/screen/Detailproduct/detailproduct.dart';
 import 'package:flutter/material.dart';
 
 class Flashsale extends StatelessWidget {
@@ -50,7 +51,17 @@ class Flashsale extends StatelessWidget {
               (index) => Flashsalecontent(
                 image: products[index]["image"],
                 text: products[index]["text"],
-                press: () {},
+                press: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Detailproduct(
+                                image: products[index]["image"],
+                                text: products[index]["text"],
+                                price: products[index]["price"].toString(),
+                                press: () {},
+                              )));
+                },
                 terjual: products[index]['terjual'].toString(),
                 price: products[index]['price'].toString(),
               ),
@@ -76,26 +87,29 @@ class Flashsalecontent extends StatelessWidget {
   final press;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 100,
-          height: 100,
-          child: Image.asset(
-            image,
-            fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        children: [
+          Container(
+            width: 100,
+            height: 100,
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
+            ),
           ),
-        ),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 10),
-          color: Colors.orange,
-          child: Text('$terjual Terjual'.toString()),
-        ),
-        Text(
-          price,
-          style: TextStyle(color: Colors.orange),
-        )
-      ],
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            color: Colors.orange,
+            child: Text('$terjual Terjual'.toString()),
+          ),
+          Text(
+            price,
+            style: TextStyle(color: Colors.orange),
+          )
+        ],
+      ),
     );
   }
 }
