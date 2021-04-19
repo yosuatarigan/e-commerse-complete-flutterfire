@@ -1,5 +1,6 @@
 import 'package:e_commerse_complete_flutterfire/component/roundedinput.dart';
 import 'package:e_commerse_complete_flutterfire/component/roundedinputpassword.dart';
+import 'package:e_commerse_complete_flutterfire/component/tabscreen.dart';
 import 'package:e_commerse_complete_flutterfire/screen/Home/HomeScree.dart';
 import 'package:e_commerse_complete_flutterfire/screen/Signup/SignupScreen.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,7 @@ class Body extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, HomeScreen.routeName);
+            Navigator.pushReplacementNamed(context, TabsScreen.routeName);
           },
           child: Text('Login'),
         ),
