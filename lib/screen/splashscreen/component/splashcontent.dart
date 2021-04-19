@@ -24,6 +24,7 @@ class Splashcontent extends StatelessWidget {
           text,
           textAlign: TextAlign.center,
         ),
+        SizedBox(height: 20,),
         Image.asset(
           image,
           height: size.height * 0.5,

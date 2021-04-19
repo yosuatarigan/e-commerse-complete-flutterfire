@@ -1,3 +1,4 @@
+import 'package:e_commerse_complete_flutterfire/screen/Home/HomeScree.dart';
 import 'package:e_commerse_complete_flutterfire/screen/Signin/signinscreen.dart';
 import 'package:e_commerse_complete_flutterfire/screen/splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
       home: Splashscreen(),
       routes: {
         SigninScreen.routeName: (ctx) => SigninScreen(),
+        HomeScreen.routeName: (ctx) => HomeScreen(),
       },
     );
   }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import '../Signin/component/body.dart';
+import './component/Body.dart';
 
-class SigninScreen extends StatelessWidget {
-  static String routeName = "/sign_in";
+class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      appBar: AppBar(),
       body: Body(),
     );
   }

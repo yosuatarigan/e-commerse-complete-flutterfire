@@ -1,5 +1,7 @@
 import 'package:e_commerse_complete_flutterfire/component/roundedinput.dart';
 import 'package:e_commerse_complete_flutterfire/component/roundedinputpassword.dart';
+import 'package:e_commerse_complete_flutterfire/screen/Home/HomeScree.dart';
+import 'package:e_commerse_complete_flutterfire/screen/Signup/SignupScreen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -27,7 +29,9 @@ class Body extends StatelessWidget {
           height: 20,
         ),
         ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, HomeScreen.routeName);
+          },
           child: Text('Login'),
         ),
         SizedBox(
@@ -58,8 +62,8 @@ class Body extends StatelessWidget {
             TextButton(
               child: Text('Don\'t have account? Signup'),
               onPressed: () {
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: (context) => Signup()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SignupScreen()));
               },
             ),
           ],
